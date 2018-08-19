@@ -1,0 +1,55 @@
+[
+  {
+    "package": "eslint-plugin-ava",
+    "rules": [
+      {
+        "path": "ava/:rule",
+        "docsURL": "https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
+    "package": "eslint-plugin-jsx-a11y",
+    "rules": [
+      {
+        "path": "jsx-a11y/:rule",
+        "docsURL": "https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
+    "package": "eslint-plugin-node",
+    "rules": [
+      {
+        "path": "node/prefer-global/:rule",
+        "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/:rule.md"
+      },
+      {
+        "path": "node/no-unsupported-features/:rule",
+        "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/:rule.md"
+      },
+      {
+        "path": "node/:rule",
+        "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
+    "package": "eslint-plugin-import",
+    "rules": [
+      {
+        "path": "import/:rule",
+        "docsURL": "https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
+    "package": "eslint",
+    "rules": [
+      {
+        "path": ":rule",
+        "docsURL": "https://eslint.org/docs/rules/:rule"
+      }
+    ]
+  }
+]
