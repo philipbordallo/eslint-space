@@ -44,6 +44,15 @@
     ]
   },
   {
+    "package": "eslint-plugin-react",
+    "rules": [
+      {
+        "path": "react/:rule",
+        "docsURL": "https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
     "package": "eslint",
     "rules": [
       {
