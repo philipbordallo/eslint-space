@@ -1,10 +1,11 @@
+/** { import('./types.js') } */
+
+import { RuleDefinition } from './types';
+
 /**
  * Add `#readme` to end of github markdown links
- *
- * @param {Array} rules
- * @returns {Promise} A promised array of rules
  */
-async function addReadMeLink(rules) {
+async function addReadMeLink(rules: RuleDefinition[]): Promise<RuleDefinition[]> {
   return rules.map((rule) => {
     const { docsURL, path } = rule;
 
@@ -21,4 +22,4 @@ async function addReadMeLink(rules) {
   });
 }
 
-module.exports = addReadMeLink;
+export default addReadMeLink;

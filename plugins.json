@@ -53,6 +53,15 @@
     ]
   },
   {
+    "package": "@typescript-eslint/eslint-plugin",
+    "rules": [
+      {
+        "path": "@typescript-eslint/:rule",
+        "docsURL": "https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/:rule.md"
+      }
+    ]
+  },
+  {
     "package": "eslint",
     "rules": [
       {
