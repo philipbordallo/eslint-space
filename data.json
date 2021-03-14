@@ -1,5 +1,5 @@
 {
-  "$schema": "./data.schema.json",
+  "$schema": "https://eslint.space/data.schema.json",
   "version": "1.0.0",
   "parsers": [
     {
