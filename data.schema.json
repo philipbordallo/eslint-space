@@ -38,6 +38,10 @@
             "description": "Name of the ESLint plugin package.",
             "type": "string"
           },
+          "parserNeeded": {
+            "description": "Whether or not a plugin needs a parser to function. It can a string or false",
+            "type": "string"
+          },
           "tags": {
             "type": "array",
             "items": {

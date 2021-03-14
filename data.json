@@ -1,7 +1,19 @@
 {
-  "$schema": "https://eslint.space/data.schema.json",
+  "$schema": "./data.schema.json",
   "version": "1.0.0",
   "parsers": [
+    {
+      "package": "@babel/eslint-parser",
+      "tags": [
+        "babel"
+      ]
+    },
+    {
+      "package": "@html5-eslint/parser",
+      "tags": [
+        "html"
+      ]
+    },
     {
       "package": "@typescript-eslint/parser",
       "tags": [
@@ -9,106 +21,339 @@
       ]
     },
     {
+      "package": "jsonc-eslint-parser",
+      "tags": [
+        "json",
+        "jsonc"
+      ]
+    },
+    {
+      "package": "toml-eslint-parser",
+      "tags": [
+        "toml"
+      ]
+    },
+    {
       "package": "vue-eslint-parser",
       "tags": [
         "vue"
+      ]
+    },
+    {
+      "package": "yaml-eslint-parser",
+      "tags": [
+        "yaml",
+        "yml"
       ]
     }
   ],
   "plugins": [
     {
-      "package": "@typescript-eslint/eslint-plugin",
-      "tags": [
-        "typescript"
-      ],
+      "package": "@html-eslint/eslint-plugin",
+      "parserNeeded": "@html5-eslint/parser",
       "rules": [
         {
-          "path": "@typescript-eslint/:rule",
-          "docsURL": "https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/:rule.md"
+          "docsURL": "https://github.com/yeonjuan/html-eslint/blob/main/docs/rules/:rule.md",
+          "path": "@html-eslint/:rule"
         }
+      ],
+      "tags": [
+        "html"
+      ]
+    },
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "parserNeeded": "@typescript-eslint/parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/:rule.md",
+          "path": "@typescript-eslint/:rule"
+        }
+      ],
+      "tags": [
+        "typescript"
       ]
     },
     {
       "package": "eslint-plugin-ava",
+      "rules": [
+        {
+          "docsURL": "https://github.com/avajs/eslint-plugin-ava/blob/main/docs/rules/:rule.md",
+          "path": "ava/:rule"
+        }
+      ],
       "tags": [
         "ava",
         "testing"
-      ],
+      ]
+    },
+    {
+      "package": "eslint-plugin-eslint-comments",
       "rules": [
         {
-          "path": "ava/:rule",
-          "docsURL": "https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/:rule.md"
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-eslint-comments/blob/master/docs/rules/:rule.md",
+          "path": "eslint-comments/:rule"
         }
+      ],
+      "tags": [
+        "comments"
+      ]
+    },
+    {
+      "package": "eslint-plugin-es",
+      "rules": [
+        {
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-es/blob/master/docs/rules/:rule.md",
+          "path": "es/:rule"
+        }
+      ],
+      "tags": [
+        "ecma",
+        "ecmascript",
+        "es"
+      ]
+    },
+    {
+      "package": "eslint-plugin-jest",
+      "rules": [
+        {
+          "docsURL": "https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/:rule.md",
+          "path": "jest/:rule"
+        }
+      ],
+      "tags": [
+        "jest",
+        "testing"
+      ]
+    },
+    {
+      "package": "eslint-plugin-json-schema-validator",
+      "rules": [
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-json-schema-validator/blob/main/docs/rules/:rule.md",
+          "path": "json-schema-validator/:rule"
+        }
+      ],
+      "tags": [
+        "json-schema",
+        "custom"
+      ]
+    },
+    {
+      "package": "eslint-plugin-jsonc",
+      "parserNeeded": "jsonc-eslint-parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-jsonc/blob/master/docs/rules/vue-custom-block/:rule.md",
+          "path": "jsonc/vue-custom-block/:rule"
+        },
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-jsonc/blob/master/docs/rules/:rule.md",
+          "path": "jsonc/:rule"
+        }
+      ],
+      "tags": [
+        "json",
+        "jsonc"
       ]
     },
     {
       "package": "eslint-plugin-jsx-a11y",
+      "rules": [
+        {
+          "docsURL": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/:rule.md",
+          "path": "jsx-a11y/:rule"
+        }
+      ],
       "tags": [
         "react",
         "a11y",
         "jsx"
-      ],
-      "rules": [
-        {
-          "path": "jsx-a11y/:rule",
-          "docsURL": "https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/:rule.md"
-        }
       ]
     },
     {
-      "package": "eslint-plugin-node",
-      "tags": [
-        "node"
-      ],
+      "package": "eslint-plugin-lodash-template",
       "rules": [
         {
-          "path": "node/prefer-global/:rule",
-          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/:rule.md"
-        },
-        {
-          "path": "node/no-unsupported-features/:rule",
-          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/:rule.md"
-        },
-        {
-          "path": "node/:rule",
-          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/:rule.md"
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-lodash-template/blob/master/docs/rules/:rule.md",
+          "path": "lodash-template/:rule"
         }
+      ],
+      "tags": [
+        "lodash",
+        "lodash-template"
       ]
     },
     {
       "package": "eslint-plugin-import",
+      "rules": [
+        {
+          "docsURL": "https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/:rule.md",
+          "path": "import/:rule"
+        }
+      ],
       "tags": [
         "files",
         "import"
-      ],
+      ]
+    },
+    {
+      "package": "eslint-plugin-node",
       "rules": [
         {
-          "path": "import/:rule",
-          "docsURL": "https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/:rule.md"
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/:rule.md",
+          "path": "node/prefer-global/:rule"
+        },
+        {
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-promises/:rule.md",
+          "path": "node/prefer-promises/:rule"
+        },
+        {
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/:rule.md",
+          "path": "node/no-unsupported-features/:rule"
+        },
+        {
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/:rule.md",
+          "path": "node/:rule"
         }
+      ],
+      "tags": [
+        "node"
+      ]
+    },
+    {
+      "package": "eslint-plugin-promise",
+      "rules": [
+        {
+          "docsURL": "https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/:rule.md",
+          "path": "promise/:rule"
+        }
+      ],
+      "tags": [
+        "promise"
+      ]
+    },
+    {
+      "package": "eslint-plugin-react-hooks",
+      "rules": [
+        {
+          "docsURL": "https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks",
+          "path": "react-hooks/:rule"
+        }
+      ],
+      "tags": [
+        "react"
       ]
     },
     {
       "package": "eslint-plugin-react",
-      "tags": [
-        "react"
-      ],
       "rules": [
         {
-          "path": "react/:rule",
-          "docsURL": "https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/:rule.md"
+          "docsURL": "https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/:rule.md",
+          "path": "react/:rule"
         }
+      ],
+      "tags": [
+        "react"
+      ]
+    },
+    {
+      "package": "eslint-plugin-regexp",
+      "rules": [
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-regexp/blob/master/docs/rules/:rule.md",
+          "path": "regexp/:rule"
+        }
+      ],
+      "tags": [
+        "regexp"
+      ]
+    },
+    {
+      "package": "eslint-plugin-sonarjs",
+      "rules": [
+        {
+          "docsURL": "https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/:rule.md",
+          "path": "sonarjs/:rule"
+        }
+      ],
+      "tags": [
+        "analyser",
+        "code-quality"
+      ]
+    },
+    {
+      "package": "eslint-plugin-toml",
+      "parserNeeded": "toml-eslint-parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-toml/blob/main/docs/rules/vue-custom-block/:rule.md",
+          "path": "toml/vue-custom-block/:rule"
+        },
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-toml/blob/main/docs/rules/:rule.md",
+          "path": "toml/:rule"
+        }
+      ],
+      "tags": [
+        "toml"
+      ]
+    },
+    {
+      "package": "eslint-plugin-vue-i18n",
+      "parserNeeded": "vue-eslint-parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/intlify/eslint-plugin-vue-i18n/blob/master/docs/rules/:rule.md",
+          "path": "vue-i18n/:rule"
+        }
+      ],
+      "tags": [
+        "vue",
+        "i18n",
+        "internationalization"
+      ]
+    },
+    {
+      "package": "eslint-plugin-vue",
+      "parserNeeded": "vue-eslint-parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/:rule.md",
+          "path": "vue/:rule"
+        }
+      ],
+      "tags": [
+        "vue"
+      ]
+    },
+    {
+      "package": "eslint-plugin-yml",
+      "parserNeeded": "yaml-eslint-parser",
+      "rules": [
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-yml/blob/master/docs/rules/vue-custom-block/:rule.md",
+          "path": "yml/vue-custom-block/:rule"
+        },
+        {
+          "docsURL": "https://github.com/ota-meshi/eslint-plugin-yml/blob/master/docs/rules/:rule.md",
+          "path": "yml/:rule"
+        }
+      ],
+      "tags": [
+        "yaml",
+        "yml"
       ]
     },
     {
       "package": "eslint",
-      "tags": [],
       "rules": [
         {
-          "path": ":rule",
-          "docsURL": "https://eslint.org/docs/rules/:rule"
+          "docsURL": "https://eslint.org/docs/rules/:rule",
+          "path": ":rule"
         }
-      ]
+      ],
+      "tags": []
     }
   ]
 }
