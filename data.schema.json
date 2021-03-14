@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ESLint Space Data",
+  "type": "object",
+  "properties": {
+    "parsers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "package": {
+            "description": "Name of the ESLint parser package.",
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "package",
+          "tags"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "plugins": {
+      "description": "ESLint plugins.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "package": {
+            "description": "Name of the ESLint plugin package.",
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "description": "Path naming scheme for rule, where `:rule` is replaced with given rule name.",
+                  "type": "string"
+                },
+                "docsURL": {
+                  "description": "URL to rule documentation.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "docsURL"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "package",
+          "tags",
+          "rules"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "version": {
+      "description": "Version of Space Schema",
+      "type": "string"
+    },
+    "additionalProperties": false
+  },
+  "required": [
+    "plugins",
+    "version"
+  ]
+}

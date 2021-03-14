@@ -1,0 +1,114 @@
+{
+  "$schema": "./data.schema.json",
+  "version": "0.1.0",
+  "parsers": [
+    {
+      "package": "@typescript-eslint/parser",
+      "tags": [
+        "typescript"
+      ]
+    },
+    {
+      "package": "vue-eslint-parser",
+      "tags": [
+        "vue"
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "package": "@typescript-eslint/eslint-plugin",
+      "tags": [
+        "typescript"
+      ],
+      "rules": [
+        {
+          "path": "@typescript-eslint/:rule",
+          "docsURL": "https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint-plugin-ava",
+      "tags": [
+        "ava",
+        "testing"
+      ],
+      "rules": [
+        {
+          "path": "ava/:rule",
+          "docsURL": "https://github.com/avajs/eslint-plugin-ava/blob/master/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint-plugin-jsx-a11y",
+      "tags": [
+        "react",
+        "a11y",
+        "jsx"
+      ],
+      "rules": [
+        {
+          "path": "jsx-a11y/:rule",
+          "docsURL": "https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint-plugin-node",
+      "tags": [
+        "node"
+      ],
+      "rules": [
+        {
+          "path": "node/prefer-global/:rule",
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/:rule.md"
+        },
+        {
+          "path": "node/no-unsupported-features/:rule",
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/:rule.md"
+        },
+        {
+          "path": "node/:rule",
+          "docsURL": "https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint-plugin-import",
+      "tags": [
+        "files",
+        "import"
+      ],
+      "rules": [
+        {
+          "path": "import/:rule",
+          "docsURL": "https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint-plugin-react",
+      "tags": [
+        "react"
+      ],
+      "rules": [
+        {
+          "path": "react/:rule",
+          "docsURL": "https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/:rule.md"
+        }
+      ]
+    },
+    {
+      "package": "eslint",
+      "tags": [],
+      "rules": [
+        {
+          "path": ":rule",
+          "docsURL": "https://eslint.org/docs/rules/:rule"
+        }
+      ]
+    }
+  ]
+}

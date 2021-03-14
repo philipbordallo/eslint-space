@@ -5,7 +5,7 @@ import addReadMeLink from './addReadMeLink';
 
 
 /**
- * Create redirects from all plugin rules
+ * Create redirects from all plugin rules.
  */
 async function createRedirects(plugins: PluginDefinition[]): Promise<string> {
   const rules = await flattenRules(plugins);
