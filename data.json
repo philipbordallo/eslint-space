@@ -9,6 +9,12 @@
       ]
     },
     {
+      "package": "@graphql-eslint/eslint-plugin",
+      "tags": [
+        "graphql"
+      ]
+    },
+    {
       "package": "@html5-eslint/parser",
       "tags": [
         "html"
@@ -49,6 +55,19 @@
   ],
   "plugins": [
     {
+      "package": "@graphql-eslint/eslint-plugin",
+      "parserNeeded": "@graphql-eslint/eslint-plugin",
+      "rules": [
+        {
+          "docsURL": "https://github.com/B2o5T/graphql-eslint/blob/master/docs/rules/:rule.md",
+          "path": "@graphql-eslint/:rule"
+        }
+      ],
+      "tags": [
+        "graphql"
+      ]
+    },
+    {
       "package": "@html-eslint/eslint-plugin",
       "parserNeeded": "@html5-eslint/parser",
       "rules": [
@@ -85,6 +104,20 @@
       "tags": [
         "ava",
         "testing"
+      ]
+    },
+    {
+      "package": "eslint-plugin-compat",
+      "rules": [
+        {
+          "docsURL": "https://github.com/amilajack/eslint-plugin-compat/blob/main/docs/rules/:rule.md",
+          "path": "compat/:rule"
+        }
+      ],
+      "tags": [
+        "browser",
+        "compatibility",
+        "browserslist"
       ]
     },
     {
@@ -133,6 +166,23 @@
           "docsURL": "https://github.com/testing-library/eslint-plugin-jest-dom/tree/main/docs/rules/:rule.md",
           "path": "jest-dom/:rule"
         }
+      ],
+      "tags": [
+        "jest",
+        "testing-library"
+      ]
+    },
+    {
+      "package": "eslint-plugin-jsdoc",
+      "rules": [
+        {
+          "docsURL": "https://github.com/gajus/eslint-plugin-jsdoc#:rule",
+          "path": "jsdoc/:rule"
+        }
+      ],
+      "tags": [
+        "jsdoc",
+        "tsdoc"
       ]
     },
     {
@@ -231,6 +281,29 @@
       ]
     },
     {
+      "package": "eslint-plugin-security",
+      "rules": [
+        {
+          "docsURL": "https://github.com/nodesecurity/eslint-plugin-security#:rule",
+          "path": "security/:rule"
+        }
+      ],
+      "tags": [
+        "node",
+        "security"
+      ]
+    },
+    {
+      "package": "eslint-plugin-prettier",
+      "rules": [
+        {
+          "docsURL": "https://github.com/prettier/eslint-plugin-prettier#options",
+          "path": "prettier/:rule"
+        }
+      ],
+      "tags": []
+    },
+    {
       "package": "eslint-plugin-promise",
       "rules": [
         {
@@ -252,6 +325,21 @@
       ],
       "tags": [
         "react"
+      ]
+    },
+    {
+      "package": "eslint-plugin-react-native",
+      "rules": [
+        {
+          "docsURL": "https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/:rule.md",
+          "path": "react-native/:rule"
+        }
+      ],
+      "tags": [
+        "react",
+        "native",
+        "ios",
+        "android"
       ]
     },
     {
@@ -292,6 +380,19 @@
       ]
     },
     {
+      "package": "eslint-plugin-testing-library",
+      "rules": [
+        {
+          "docsURL": "https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/:rule.md",
+          "path": "testing-library/:rule"
+        }
+      ],
+      "tags": [
+        "jest",
+        "testing-library"
+      ]
+    },
+    {
       "package": "eslint-plugin-toml",
       "parserNeeded": "toml-eslint-parser",
       "rules": [
@@ -307,6 +408,16 @@
       "tags": [
         "toml"
       ]
+    },
+    {
+      "package": "eslint-plugin-unicorn",
+      "rules": [
+        {
+          "docsURL": "https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/:rule.md",
+          "path": "unicorn/:rule"
+        }
+      ],
+      "tags": []
     },
     {
       "package": "eslint-plugin-vue-i18n",

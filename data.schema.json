@@ -59,7 +59,7 @@
                   "type": "string"
                 },
                 "docsURL": {
-                  "description": "URL to rule documentation.",
+                  "description": "URL to rule documentation, where `:rule` is replaced with given rule name.",
                   "type": "string"
                 }
               },
