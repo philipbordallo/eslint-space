@@ -4,9 +4,9 @@ import { RuleDefinition } from './types';
 const AUTO_COMMENT = '# THIS IS AN AUTO-GENERATED FILE\n\n';
 
 /**
- * Transform all rules into a string.
+ * Transform all rules into a redirect string.
  */
-async function stringifyRules(rules: RuleDefinition[]): Promise<string> {
+async function toRedirectString(rules: RuleDefinition[]): Promise<string> {
   return rules.reduce((collection, rules) => {
     const { path, docsURL } = rules;
 
@@ -14,4 +14,4 @@ async function stringifyRules(rules: RuleDefinition[]): Promise<string> {
   }, AUTO_COMMENT);
 }
 
-export default stringifyRules;
+export default toRedirectString;

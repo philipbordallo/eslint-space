@@ -1,6 +1,6 @@
 import { PluginDefinition } from './types';
 import flattenRules from './flattenRules';
-import stringifyRules from './stringifyRules';
+import toRedirectString from './toRedirectString';
 import addReadMeLink from './addReadMeLink';
 
 
@@ -10,7 +10,7 @@ import addReadMeLink from './addReadMeLink';
 async function createRedirects(plugins: PluginDefinition[]): Promise<string> {
   const rules = await flattenRules(plugins);
   const readMeRules = await addReadMeLink(rules);
-  const stringifiedRules = await stringifyRules(readMeRules);
+  const stringifiedRules = await toRedirectString(readMeRules);
 
   return stringifiedRules;
 }

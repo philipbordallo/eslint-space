@@ -14,8 +14,8 @@
   "homepage": "https://.com/philipbordallo/eslint-space#readme",
   "bugs": "https://github.com/philipbordallo/eslint-space/issues",
   "scripts": {
-    "build": "ts-node build.ts",
-    "version": "ts-node version.ts && git add ."
+    "build": "ts-node ./scripts/build.ts",
+    "version": "ts-node ./scripts/version.ts && git add ."
   },
   "devDependencies": {
     "@types/node": "^14.18.12",

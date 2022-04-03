@@ -1,7 +1,7 @@
 import fs from 'fs';
 
-import pkg from './package.json';
-import data from './data.json';
+import pkg from '../package.json';
+import data from '../data.json';
 
 
 async function run() {
@@ -10,7 +10,7 @@ async function run() {
     version: pkg.version,
   };
 
-  fs.promises.writeFile('./data.json', JSON.stringify(newData, null, 2));
+  fs.promises.writeFile('../data.json', JSON.stringify(newData, null, 2));
 }
 
 run().catch(console.error);

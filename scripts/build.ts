@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 
-import data from './data.json';
-import pkg from './package.json';
-import createRedirects from './lib/createRedirects';
+import data from '../data.json';
+import pkg from '../package.json';
+import createRedirects from '../lib/createRedirects';
 
 
-const DIST_PATH = path.resolve(__dirname, 'dist');
+const DIST_PATH = path.resolve(__dirname, '..', 'dist');
 const DIST_REDIRECTS_FILE = path.resolve(DIST_PATH, '_redirects');
 
 /**
