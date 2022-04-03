@@ -18,8 +18,8 @@
     "version": "ts-node version.ts && git add ."
   },
   "devDependencies": {
-    "@types/node": "^14.14.34",
+    "@types/node": "^14.18.12",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.10"
   }
 }
