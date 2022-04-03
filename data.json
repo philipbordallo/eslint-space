@@ -127,6 +127,15 @@
       ]
     },
     {
+      "package": "eslint-plugin-jest-dom",
+      "rules": [
+        {
+          "docsURL": "https://github.com/testing-library/eslint-plugin-jest-dom/tree/main/docs/rules/:rule.md",
+          "path": "jest-dom/:rule"
+        }
+      ]
+    },
+    {
       "package": "eslint-plugin-json-schema-validator",
       "rules": [
         {

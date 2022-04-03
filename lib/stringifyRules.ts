@@ -1,10 +1,10 @@
 import { RuleDefinition } from './types';
 
 
-const AUTO_COMMENT = '# THIS IS AN AUTO–GENERATED FILE\n\n';
+const AUTO_COMMENT = '# THIS IS AN AUTO-GENERATED FILE\n\n';
 
-/** 
- * Transform all rules into a string. 
+/**
+ * Transform all rules into a string.
  */
 async function stringifyRules(rules: RuleDefinition[]): Promise<string> {
   return rules.reduce((collection, rules) => {
